@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"> <!-- changement /> en > -->
     <title>Reservation</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="modal.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- changement /> en > -->
+    <link rel="stylesheet" href="modal.css"> <!-- changement /> en > -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link
-      href="https://fonts.googleapis.com/css?family=DM+Sans"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet"> <!-- changement /> en > -->
   </head>
+
   <body>
+    
     <div class="topnav" id="myTopnav">
+
       <div class="header-logo">
-      <img alt="logo" src="Logo.png" width="auto" height="auto" />
+        <img src="Logo.png" alt="logo" width="auto" height="auto" />
+      </div>
+
+      <div class="main-navbar">
+        <a href="#" class="active"><span>Accueil</span></a>
+        <a href="#"><span>Détails de l'évènement</span></a>
+        <a href="#"><span>À propos</span></a>
+        <a href="#"><span>Contact</span></a>
+        <a href="#"><span>Évènements passés</span></a>
+        <a href="javascript:void(0);" class="icon" onclick="editNav()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
     </div>
-    <div class="main-navbar">
-      
-      <a href="#" class="active"><span>Accueil</span></a>
-      <a href="#"><span>Détails de l'évènement</span></a>
-      <a href="#"><span>À propos</span></a>
-      <a href="#"><span>Contact</span></a>
-      <a href="#"><span>Évènements passés</span></a>
-      <a href="javascript:void(0);" class="icon" onclick="editNav()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
-    </div>
+
   </div>
     <main>
       <div class="hero-section">
@@ -60,11 +62,10 @@
               name="reserve"
               action="index.html"
               method="get"
-              onsubmit="return validate();"
-            >
+              onsubmit="return validate();">
               <div
                 class="formData">
-                <label>Prénom</label><br>
+                <label for="first">Prénom</label><br> <!-- ajout de for pour lier le label a l'imput via l'id -->
                 <input
                   class="text-control"
                   type="text"
@@ -75,7 +76,7 @@
               </div>
               <div
                 class="formData">
-                <label>Nom</label><br>
+                <label for="last">Nom</label><br> <!-- ajout de for pour lier le label a l'imput via l'id -->
                 <input
                   class="text-control"
                   type="text"
@@ -85,7 +86,7 @@
               </div>
               <div
                 class="formData">
-                <label>E-mail</label><br>
+                <label for="email">E-mail</label><br> <!-- ajout de for pour lier le label a l'imput via l'id -->
                 <input
                   class="text-control"
                   type="email"
@@ -95,7 +96,7 @@
               </div>
               <div
                 class="formData">
-                <label>Date de naissance</label><br>
+                <label for="birthdate">Date de naissance</label><br> <!-- ajout de for pour lier le label a l'imput via l'id -->
                 <input
                   class="text-control"
                   type="date"
@@ -105,8 +106,14 @@
               </div>
               <div
                 class="formData">
-                <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <label for="location1">À combien de tournois GameOn avez-vous déjà participé ?</label><br> <!-- ajout de for pour lier le label a l'imput via l'id -->
+                <input type="number" 
+                class="text-control" 
+                id="quantity" 
+                name="quantity" 
+                min="0" 
+                max="99"
+                >
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
