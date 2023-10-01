@@ -5,6 +5,7 @@
     <meta charset="utf-8"> <!-- changement /> en > -->
     <title>Reservation</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="ASSETS/images/icon.png">
     <!---------------------------------------- LIEN CSS --------------------------------------->
     <link rel="stylesheet" href="CSS/modal.css">
     <!----------------------------------------- SCRIPT JS --------------------------------------->
@@ -29,7 +30,9 @@
 
         <nav>
           <div class="main-navbar">
-            <a href="#" class="active"><span>Accueil</span></a>
+            <!-- <a href="#" class="active"><span>Accueil</span></a> -->
+            <!-- suppression de la class="active" pour ne plus avoir acceuil en focus-->
+            <a href="#"><span>Accueil</span></a> 
             <a href="#"><span>Détails de l'évènement</span></a>
             <a href="#"><span>À propos</span></a>
             <a href="#"><span>Contact</span></a>
@@ -76,73 +79,54 @@
 
       </div>
 
+      <!-- MODAL -->
       <div class="bground">
-
         <div class="content">
-
           <span class="close"></span>
-
           <div class="modal-body">
-
+            <!-- FORM -->
             <!-- <form name="reserve" action="index.html" method="get" onsubmit="return validate();"> -->
             <form name="reserve" action="index.html" method="get">
-              
-              <!-- Prénom -->
-              <div class="formData">
-                <!-- 2 issue: ajout de for pour lier le label a l'imput via l'id -->
-                <label 
-                  for="first">
-                  Prénom
-                </label>
-                <br> 
-                <!-- 2 issue: ajout required pour obligation de mettre deux lettre -->
+              <!-- FIRST NAME-->
+              <div class="formData" data-error="Veuillez entrer 2 caractères ou plus." data-error-visible="false">
+                <label  for="first">Prénom</label><br> 
                 <input 
                   class="text-control" 
                   type="text" 
                   id="first" 
-                  name="first" 
+                  name="first"
+                  placeholder="Prénom" 
                   minlength="2"
                   required
-                >
-                <br>
+                ><br>
               </div>
-
-              <!-- Nom -->
-              <div class="formData">
-                <!-- 2 issue: ajout de for pour lier le label a l'imput via l'id -->
-                <label 
-                  for="last">
-                  Nom
-                </label>
-                <br> 
-                <!-- ajout minlength et required pour obligation de mettre deux lettre -->
+              <!-- NOM -->
+              <div class="formData" data-error="Veuillez entrer 2 caractères ou plus." data-error-visible="false">
+                <!--ajout de for pour lier le label a l'imput via l'id -->
+                <label  for="last">Nom</label><br> 
                 <input 
                   class="text-control" 
                   type="text" 
                   id="last" 
                   name="last"
+                  placeholder="Nom"
                   minlength="2"
                   required
-                >
-                <br>
+                ><br>
               </div>
 
-              <!-- E-mail -->
-              <div class="formData">
-                <!-- 2 issue: ajout de for pour lier le label a l'imput via l'id -->
-                <label 
-                  for="email">
-                  E-mail
-                </label>
-                <br> 
-
-                <input class="text-control" type="email" id="email" name="email"
-                pattern="[A-Za-z0-9\.\-]+@([A-Za-z0-9\-]+\.[A-Za-z]{2,4})$"
-                placeholder="Ex:email@domaine.com"
-                required
-                 >
-                <br>
-
+              <!-- E-MAIL -->
+              <div class="formData" data-error="Veuillez entrer une adresse email valide">
+                <label for="email">E-mail</label><br> 
+                <input 
+                  class="text-control" 
+                  type="email" 
+                  id="email" 
+                  name="email"
+                  pattern="[A-Za-z0-9\.\-]+@([A-Za-z0-9\-]+\.[A-Za-z]{2,4})$"
+                  placeholder="exemple@domaine.com"
+                  required
+                ><br>
               </div>
 
               <!-- Date de naissance -->
@@ -234,7 +218,6 @@
                   <span class="checkbox-icon"></span>
                   Chicago
                 </label>
-
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -246,7 +229,6 @@
                   <span class="checkbox-icon"></span>
                   Boston
                 </label>
-
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -257,10 +239,8 @@
                 <label class="checkbox-label" for="location6">
                   <span class="checkbox-icon"></span>
                   Portland
-                </label>
-                
+                </label> 
               </div>
-
               <div class="formData">
                 <!--
                   suppression de checked pour ne plus avoir la case cocher par defaut  
@@ -271,37 +251,43 @@
                   type="checkbox"
                   id="checkbox1"
                   required
-                />
-                
+                />       
                 <label class="checkbox2-label" for="checkbox1" required>
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
                 <br>
-
                 <input class="checkbox-input" type="checkbox" id="checkbox2">
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
                   Je souhaite être prévenu des prochains évènements.
                 </label>
                 <br>
-
               </div>
-
               <input
                 class="btn-submit"
                 type="submit"
-                class="button"
                 value="C'est parti"
                 />
-
             </form>
-
           </div>
-
         </div>
+      </div> 
 
+      <!-- CONFIRMATION SUBMIT -->
+    <!-- <div class="container-confirmation-submit">
+      <div class="submitted-form">
+        <span class="close-modal-submit"></span>
+        <p>
+          Merci !
+          <br>
+          Votre réservation a été reçue.
+        </p>
+        <button id="close-btn-confirmation"> Fermer
+        </button>
       </div>
+    </div> -->
+
     </main>
 
     <!-- FOOTER -->
