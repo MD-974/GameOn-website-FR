@@ -11,6 +11,7 @@
     <!----------------------------------------- SCRIPT JS --------------------------------------->
     <script src="JS/modal.js" defer></script>
     <script src="JS/form.js" defer></script>
+    <script src="JS/modalForm.js" defer></script>
     <!--------------------------------------- LIEN FONTS -------------------------------------->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet">
@@ -84,11 +85,14 @@
         <div class="content">
           <span class="close"></span>
           <div class="modal-body">
+
             <!-- FORM -->
             <!-- <form name="reserve" action="index.html" method="get" onsubmit="return validate();"> -->
             <form name="reserve" action="index.html" method="get">
+
               <!-- FIRST NAME-->
-              <div class="formData" data-error="Veuillez entrer 2 caractères ou plus." data-error-visible="false">
+              <div 
+                class="formData">
                 <label  for="first">Prénom</label><br> 
                 <input 
                   class="text-control" 
@@ -98,7 +102,8 @@
                   placeholder="Prénom" 
                   minlength="2"
                   required
-                ><br>
+                >
+                <br>
               </div>
               <!-- NOM -->
               <div class="formData" data-error="Veuillez entrer 2 caractères ou plus." data-error-visible="false">
@@ -273,7 +278,6 @@
           </div>
         </div>
       </div> 
-
     </main>
 
     <!-- FOOTER -->
