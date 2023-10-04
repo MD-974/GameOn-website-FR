@@ -49,23 +49,20 @@ img {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px; }
-/* add red color and bold text to the hover */
-.topnav a:hover {
+.topnav a:hover {/* add red color and bold text to the hover */
   color: #ff0000;
   font-weight: 700;
-  border-radius: 15px;
-}
-/* add focus to the title click */
-/*.topnav a:hover,*/ .topnav a:focus {
+  border-radius: 15px; }
+/*.topnav a:hover,*/ .topnav a:focus {/* add focus to the title click */
   background-color: #ff0000;
   color: #ffffff;
   font-weight: 700;
   border-radius: 15px; }
-/* add underline to title focus */
-.topnav a:focus span {
+.topnav a:focus span {/* add underline to title focus */
   border-bottom: 2px solid white; }
-.topnav .icon {
-  display: none; }
+.topnav .icon {/* ajout color red */
+  display: none;
+  color: #ff0000; }
 
 @media screen and (max-width: 1130px) {
   .topnav a {
@@ -160,7 +157,6 @@ main {
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto; }
-  
 label {
   font-family: var(--font-default);
   font-size: 17px;
@@ -178,7 +174,8 @@ input {
   border-radius: 8px;
   font-size: 20px;
   height: 48px; }
-.formData[data-error]::after {
+
+  /* .formData[data-error]::after {
   content: attr(data-error);
   font-size: 0.5em;
   color: #e54858;
@@ -194,13 +191,16 @@ input {
 input[data-error]::after {
   content: attr(data-error);
   font-size: 0.6em;
-  color: red; }
-.checkbox-label, .checkbox2-label {
+  color: red; } */
+
+.checkbox-label,
+.checkbox2-label {
   position: relative;
   margin-left: 36px;
   font-size: 12px;
   font-weight: normal; }
-.checkbox-label .checkbox-icon, .checkbox2-label .checkbox-icon {
+.checkbox-label .checkbox-icon,
+.checkbox2-label .checkbox-icon {
   display: block;
   width: 20px;
   height: 20px;
@@ -212,7 +212,8 @@ input[data-error]::after {
   left: -30px;
   top: -1px;
   transition: 0.3s; }
-.checkbox-label .checkbox-icon::after, .checkbox2-label .checkbox-icon::after {
+.checkbox-label .checkbox-icon::after,
+.checkbox2-label .checkbox-icon::after {
   content: "";
   width: 13px;
   height: 13px;
@@ -399,10 +400,20 @@ footer {
   padding-left: 2vw;
   padding-right: 2vw;
   margin: 0 20px; }
+  
+  @keyframes modalopen {
+    from {
+      opacity: 0;
+      transform: translateY(-150px);
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
-@media screen and (max-width: 800px) {
-  .hero-section {
-    display: block;
+  @media screen and (max-width: 800px) {
+    .hero-section {
+      display: block;
     box-shadow: unset; }
   .hero-content {
     background: #fff;
@@ -430,13 +441,18 @@ footer {
     text-align: center; }
 }
 
-@keyframes modalopen {
-  from {
-    opacity: 0;
-    transform: translateY(-150px);
-  }
-  to {
-    opacity: 1;
-  }
+.error-input {
+  border: 3px solid red;
 }
+
+.error {
+  /* display: none;  */
+  color: #e54858;
+  font-size: small;
+} 
+/* .errorLast {
+   display: none;
+  color: #e54858;
+  font-size: small;
+}  */
 

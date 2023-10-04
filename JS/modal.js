@@ -1,30 +1,49 @@
-// ----------------- DOM ELEMENTS MODAL ---------------- //
+//-----------//
+// Variables //
+//-----------//
+
+// DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
-const formData = document.querySelectorAll(".formData");
-const closeBtn = document.querySelector(".close");
+const modalClose = document.querySelector(".form-close");
+// const formData = document.querySelectorAll(".formData");
 
-// ------------------- DISPLAY MODAL ------------------- //
-// LAUNCH MODAL EVENTS
+//-------------------------------------------------------------------//
+
+//--------//
+// Events //
+//--------//
+
+// launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-// LAUNCH MODAL FORM
+// close modal event
+modalClose.addEventListener("click", closeModal);
+
+//-------------------------------------------------------------------//
+
+//-----------//
+// Functions //
+//-----------//
+
+// responsive nav
+function editNav() {
+	var x = document.getElementById("myTopnav");
+	if (x.className === "topnav") {
+		x.className += " responsive";
+	} else {
+		x.className = "topnav";
+	}
+}
+// launch modal form
 function launchModal() {
   modalbg.style.display = "block";
 }
-// CLOSE MODAL EVENTS
-closeBtn.addEventListener("click", closeModal);
-// CLOSE MODAL FORM
+// close modal form
 function closeModal() {
   modalbg.style.display = "none";
 }
 
-// ---------------- DISPLAY NAV RESPONSIVE ------------- //
-// EDIT NAV
-function editNav() {
-  let x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
+//-------------------------------------------------------------------//
+
+
+
