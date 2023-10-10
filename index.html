@@ -20,7 +20,7 @@
   <body> 
     <div class="topnav" id="myTopnav">
       <div class="header-logo">
-      <img alt="logo" src="Logo.png" width="auto" height="auto" />
+      <img alt="logo" src="ASSETS/logo/Logo.png" width="auto" height="auto" />
     </div>
     <div class="main-navbar">
       
@@ -85,7 +85,10 @@
                   id="first"
                   name="first"
                   minlength="2"
-                /><br>
+                  placeholder="Prénom"
+                /> 
+                <p class="error">Veuillez entrer un prénom avec 2 caractères au minimum.</p>
+                <!-- <br> -->
               </div>
               <div
                 class="formData">
@@ -95,7 +98,10 @@
                   type="text"
                   id="last"
                   name="last"
-                /><br>
+                  placeholder="Nom"
+                />
+                <p class="error">Veuillez entrer un nom avec 2 caractères au minimum.</p>
+                <!-- <br> -->
               </div>
               <div
                 class="formData">
@@ -105,7 +111,10 @@
                   type="email"
                   id="email"
                   name="email"
-                /><br>
+                  placeholder="exemple@email.fr"
+                />
+                <p class="error">Veuillez entrer une adresse e-mail valide.</p>
+                <!-- <br> -->
               </div>
               <div
                 class="formData">
@@ -115,12 +124,16 @@
                   type="date"
                   id="birthdate"
                   name="birthdate"
-                /><br>
+                />
+                <p class="error">Veuillez entrer votre date de naissance.</p>
+                <!-- <br> -->
               </div>
               <div
                 class="formData">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <p class="error">Veuillez entrer un nombre entre 0-99.</p>
+                <!-- <br> -->
               </div>
               <p class="text-label">Quelles villes ?</p>
               <div
@@ -191,8 +204,10 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
+                <p class="error">Veuillez selectionner une ville.</p>
+                <!-- <br> -->
               </div>
-
+  
               <div
                 class="formData">
                 <input
@@ -212,6 +227,7 @@
                   <span class="checkbox-icon"></span>
                   Je souhaite être prévenu des prochains évènements.
                 </label>
+                <p class="error">Veuillez lire et accepter les condtions d'utilisation.</p>
                 <br>
               </div>
               <input
@@ -221,6 +237,8 @@
                 value="C'est parti"
               />
             </form>
+            
+            
           </div>
         </div>
       </div>

@@ -440,15 +440,15 @@ footer {
     margin-top: 50px;
     text-align: center; }
 }
-
-.error-input {
+/* .error-input {
   border: 3px solid red;
-}
+} */
 
 .error {
   /* display: none;  */
   color: #e54858;
-  font-size: small;
+  font-size: 10px;
+  text-align: right;
 } 
 /* .errorLast {
    display: none;
