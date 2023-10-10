@@ -22,7 +22,10 @@ form.addEventListener("submit", (event) => {
   console.log(firstNameInput.value)
   //--vérification  des requis de validation
   if (firstNameInput.value == "") {
-      console.log("Le Prénom est requis.");
+      // console.log("Le Prénom est requis.");
+      firstNameError.innerHTML = "Veuillez entrer 2 caractères ou plus pour le champ du prénom.";
+      firstNameError.style.fontSize = "10px";
+      firstNameError.style.color="red";
     } else if 
       (firstNameInput.value.length < 2) {
         console.log("Le Prénom doit faire plus de 2 caractères.");
