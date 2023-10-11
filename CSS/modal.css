@@ -445,7 +445,7 @@ footer {
 } */
 
 .error {
-  /* display: none;  */
+  display: none; 
   color: #e54858;
   font-size: 10px;
   text-align: right;

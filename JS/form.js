@@ -36,6 +36,7 @@ form.addEventListener("submit", (event) => {
   //--vérification  des requis de validation
   if (lastNameInput.value == "") {
       console.log("Le Nom est requis.");
+      
     } else if 
       (lastNameInput.value.length < 2) {
         console.log("Le Nom doit faire plus de 2 caractères.");
