@@ -5,7 +5,6 @@
   const firstNameInput = document.getElementById("first");
   const firstNameError = firstNameInput.parentElement;
 
-  
   const lastNameInput = document.getElementById("last");
   const lastNameError = lastNameInput.parentElement;
 
@@ -13,6 +12,8 @@
   const emailError = emailInput.parentElement;
   
   const birthdateInput = document.getElementById("birthdate");
+  const birthdateError = birthdateInput.parentElement;
+
   const quantityInput = document.getElementById("quantity");
   const location1 = document.getElementById("location1");
   const location2 =  document.getElementById("location2");
@@ -22,9 +23,11 @@
   const location6 =  document.getElementById("location6");
   const checkbox1 = document.getElementById("checkbox1");
 
+
   // ------------- STOP DEFAULT BROWSER ACTIONS -------------//
   form.addEventListener("submit", (event) => {
     event.preventDefault()
+
 
     //--récupération de la valeur de l’input
     console.log(firstNameInput.value)
@@ -88,9 +91,27 @@
       emailError.lastElementChild.style.display="none";
     }
 
+
+    //--validation de la date de naissance
+    const regexBirthdate = /^([0-9]{2})|([0-9]{2})|([0-9]{4})$/;
+     console.log(birthdateInput.value)
+
+     if (birthdateInput.value == "") {
+      console.log("Veuillez indiquer une date de naissance.");
+      // récuperation du dernier element de la div et modification du texte
+      birthdateError.lastElementChild.textContent = "Veuillez indiquer une date de naissance.";
+      // affichage du message d'erreur
+      birthdateError.lastElementChild.style.display = "block";
+    } else {
+      // cacher le message d'erreur
+      birthdateError.lastElementChild.style.display="none";
+    }
+    
+
     //--validation nombre de participation
     const regexQuantity = /^[0-9]$/;
       console.log(quantityInput.value);
+      
       if (quantityInput.value == "") {
         console.log("Veuillez indiquer le nombre de participation.");
       }
@@ -105,7 +126,7 @@
   if (!checkbox1.checked){
     console.log("Veuillez lire et accepter les condtions d'utilisation.");
   }
-  }
+  } 
   )
 
 
