@@ -440,7 +440,7 @@ footer {
     margin-top: 50px;
     text-align: center; }
 }
-/* .error-input {
+/*.error-input {
   border: 3px solid red;
 } */
 
@@ -450,7 +450,7 @@ footer {
   font-size: 10px;
   text-align: right;
 } 
-/* .errorLast {
+/*.errorLast {
    display: none;
   color: #e54858;
   font-size: small;
