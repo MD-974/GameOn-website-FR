@@ -15,6 +15,8 @@
   const birthdateError = birthdateInput.parentElement;
 
   const quantityInput = document.getElementById("quantity");
+  const quantityError = quantityInput.parentElement;
+
   const location1 = document.getElementById("location1");
   const location2 =  document.getElementById("location2");
   const location3 =  document.getElementById("location3");
@@ -113,8 +115,15 @@
       console.log(quantityInput.value);
       
       if (quantityInput.value == "") {
-        console.log("Veuillez indiquer le nombre de participation.");
-      }
+        console.log("Veuillez indiquer le nombre de participation entre 0-99.");
+      // récuperation du dernier element de la div et modification du texte
+      quantityError.lastElementChild.textContent = "Veuillez indiquer le nombre de participation entre 0-99.";
+      // affichage du message d'erreur
+      quantityError.lastElementChild.style.display = "block";
+    } else {
+      // cacher le message d'erreur
+      quantityError.lastElementChild.style.display="none";
+    }
     
     //--validation selection de la ville
       if (!location1.checked && !location2.checked && !location3.checked
