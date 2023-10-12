@@ -54,24 +54,19 @@ form.addEventListener("submit", (event) => {
 
   //--validation nombre de participation
   const regexQuantity = /^[0-9]$/;
-    // regexQuantity.size =2
-    // regexQuantity.maxlength = 2
     console.log(quantityInput.value);
-
     if (quantityInput.value == "") {
       console.log("Veuillez indiquer le nombre de participation.");
     }
   
   //--validation selection de la ville
-    if ((location1.checked)|| (location2.checked) || (location3.checked)
-   ||(location4.checked) ||(location5.checked) ||(location6.checked)) { //alert("c cool")
-  } else {
+    if (!location1.checked && !location2.checked && !location3.checked
+   && !location4.checked && !location5.checked && !location6.checked) { 
     console.log("Selectionner une ville."); 
 }
 
 //--validation condition d'utilisation
-if(checkbox1.checked){
-} else {
+if(!checkbox1.checked){
   console.log("Veuillez lire et accepter les condtions d'utilisation.");
 }
 
