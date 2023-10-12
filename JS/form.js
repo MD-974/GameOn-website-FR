@@ -5,7 +5,7 @@
   const firstNameInput = document.getElementById("first");
   const firstNameInputParent = firstNameInput.parentElement;
 
-
+  
   const lastNameInput = document.getElementById("last");
   const emailInput = document.getElementById("email");
   const birthdateInput = document.getElementById("birthdate");
@@ -18,14 +18,12 @@
   const location6 =  document.getElementById("location6");
   const checkbox1 = document.getElementById("checkbox1");
 
-
   // ------------- STOP DEFAULT BROWSER ACTIONS -------------//
   form.addEventListener("submit", (event) => {
     event.preventDefault()
 
     //--récupération de la valeur de l’input
-    // console.log(firstNameInput.value)
-
+    console.log(firstNameInput.value)
     //--vérification  des requis de validation
     if (firstNameInput.value == "") {
         console.log("Le Prénom est requis.");
@@ -35,7 +33,7 @@
         }
 
     //--récupération de la valeur de l’input
-    // console.log(lastNameInput.value)
+    console.log(lastNameInput.value)
     //--vérification  des requis de validation
     if (lastNameInput.value == "") {
         console.log("Le Nom est requis.");
@@ -47,7 +45,7 @@
 
     //--récupération de l'email
     const regexEmail = /^[A-Za-z0-9\.\-]+@([A-Za-z0-9\.\-]+\.[A-Za-z]{2,4})$/;
-      // console.log(emailInput.value)
+      console.log(emailInput.value)
 
     if (emailInput.value == "") {
       console.log("L'Email est requis.");
@@ -57,7 +55,7 @@
 
     //--validation nombre de participation
     const regexQuantity = /^[0-9]$/;
-      // console.log(quantityInput.value);
+      console.log(quantityInput.value);
       if (quantityInput.value == "") {
         console.log("Veuillez indiquer le nombre de participation.");
       }
