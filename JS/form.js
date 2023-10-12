@@ -10,6 +10,8 @@
   const lastNameError = lastNameInput.parentElement;
 
   const emailInput = document.getElementById("email");
+  const emailError = emailInput.parentElement;
+  
   const birthdateInput = document.getElementById("birthdate");
   const quantityInput = document.getElementById("quantity");
   const location1 = document.getElementById("location1");
@@ -71,8 +73,19 @@
 
     if (emailInput.value == "") {
       console.log("L'Email est requis.");
+      // récuperation du dernier element de la div et modification du texte
+      emailError.lastElementChild.textContent = "L'Email est requis.";
+      // affichage du message d'erreur
+      emailError.lastElementChild.style.display = "block";
     } else if (!regexEmail.test(emailInput.value)){
       console.log("L'Email n'est pas au bon format.");
+      // récuperation du dernier element de la div et modification du texte
+      emailError.lastElementChild.textContent = "L'Email n'est pas au bon format ( exemple@email.fr ).";
+      // affichage du message d'erreur
+      emailError.lastElementChild.style.display = "block";
+    } else {
+      // cacher le message d'erreur
+      emailError.lastElementChild.style.display="none";
     }
 
     //--validation nombre de participation
