@@ -7,6 +7,7 @@
 
   
   const lastNameInput = document.getElementById("last");
+  const lastNameError = lastNameInput.parentElement;
 
   const emailInput = document.getElementById("email");
   const birthdateInput = document.getElementById("birthdate");
@@ -49,11 +50,20 @@
     //--vérification  des requis de validation
     if (lastNameInput.value == "") {
         console.log("Le Nom est requis.");
-        
-      } else if 
-        (lastNameInput.value.length < 2) {
-          console.log("Le Nom doit faire plus de 2 caractères.");
-        }
+       // récuperation du dernier element de la div et modification du texte
+        lastNameError.lastElementChild.textContent = "Le Nom est requis.";
+        // affichage du message d'erreur
+        lastNameError.lastElementChild.style.display = "block";
+      } else if (lastNameInput.value.length < 2) {
+        console.log("Le Nom doit faire plus de 2 caractères.");
+        // récuperation du dernier element de la div et modification du texte
+        lastNameError.lastElementChild.textContent="Le Nom doit faire plus de 2 caractères.";
+        // affichage du message d'erreur
+        lastNameError.lastElementChild.style.display="block";
+      } else {
+        // cacher le message d'erreur
+        lastNameError.lastElementChild.style.display="none";
+      }
 
     //--récupération de l'email
     const regexEmail = /^[A-Za-z0-9\.\-]+@([A-Za-z0-9\.\-]+\.[A-Za-z]{2,4})$/;
