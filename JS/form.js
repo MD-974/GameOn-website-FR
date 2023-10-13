@@ -4,7 +4,8 @@
 
   const firstNameInput = document.getElementById("first");
   const firstNameError = firstNameInput.parentElement;
-  // const firstNameBorder = firstNameInput.inputMode
+  // const firstNameBorder = document.getElementsByClassName("text-control-error")
+
 
   const lastNameInput = document.getElementById("last");
   const lastNameError = lastNameInput.parentElement;
@@ -16,12 +17,19 @@
   const quantityError = quantityInput.parentElement;
 
   const location1 = document.getElementById("location1");
+  // const location1Error = location1.parentElement;
   const location2 =  document.getElementById("location2");
+  // const location2Error = location2.parentElement;
   const location3 =  document.getElementById("location3");
+  // const location3Error = location3.parentElement;
   const location4 =  document.getElementById("location4");
+  // const location4Error = location4.parentElement;
   const location5 =  document.getElementById("location5");
+  // const location5Error = location5.parentElement;
   const location6 =  document.getElementById("location6");
-
+  // const location6Error = location6.parentElement;
+  const locationError = document.getElementById("location-error")
+  const locationsError = locationError.parentElement;
   // const locations = document.querySelectorAll(type[radio])
   // const locationsError=locations.parentElement;
 
@@ -41,7 +49,7 @@
         console.log("Le Prénom est requis.");
         firstNameError.lastElementChild.textContent = "Le Prénom est requis.";// récuperation du dernier element de la div et modification du texte
         firstNameError.lastElementChild.style.display = "block";// affichage du message d'erreur
-        // firstNameBorder.firstNameInput.style.border = "block";
+        // firstNameBorder.style.border = "block";
       } else if (firstNameInput.value.length < 2) {
         console.log("Le Prénom doit faire plus de 2 caractères.");
         firstNameError.lastElementChild.textContent="Le Prénom doit faire plus de 2 caractères.";// récuperation du dernier element de la div et modification du texte
@@ -112,8 +120,14 @@
     //--validation selection de la ville
       if (!location1.checked && !location2.checked && !location3.checked
     && !location4.checked && !location5.checked && !location6.checked) { 
-      console.log("Selectionner une ville."); 
-    }
+      console.log("Selectionner une ville.");
+      
+      locationsError.lastElementChild.textContent = "Selectionner une ville.";
+      locationsError.lastElementChild.style.display = "block";
+    }  else {
+      locationsError.lastElementChild.style.display = "none";
+
+     }
   //   if (!locations.checked){
   //       // récuperation du dernier element de la div et modification du texte
   //    locationsError.lastElementChild.textContent = "Veuillez selectionner une ville.";

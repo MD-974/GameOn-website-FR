@@ -79,14 +79,16 @@
               <div
                 class="formData" data-error-visible="false">
                 <label for="first">Prénom</label><br>
+                <!-- class="text-control text-control-error" -->
                 <input
-                  class="text-control"
+                  class="text-control" 
                   type="text"
                   id="first"
                   name="first"
                   minlength="2"
                   placeholder="Prénom"
                 /> 
+                <!-- <p class="error" id="error-border"></p> -->
                 <p class="error"></p>
               </div>
               <div
@@ -200,7 +202,7 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
-                <p class="error"></p>
+                <p class="error " id="location-error"></p>
               </div>
   
               <div

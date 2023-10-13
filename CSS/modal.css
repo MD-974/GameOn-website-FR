@@ -172,8 +172,8 @@ input {
   width: 100%;
   border-radius: 8px;
   font-size: 20px;
-  height: 48px; }
-
+  height: 48px;
+}
   /* .formData[data-error]::after {
   content: attr(data-error);
   font-size: 0.5em;
@@ -440,11 +440,16 @@ footer {
     margin-top: 50px;
     text-align: center; }
 }
-/* .error-input {
+#location-error {
+  display: none; 
+  color: red;
+  font-size: 10px;
+  text-align: left;
+}
+/* .text-control-error {
   border: none;
-  border: 3px solid red;
+  border: #f00;
 } */
-
 .error {
   display: none; 
   color: red;
