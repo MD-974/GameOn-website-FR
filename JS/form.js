@@ -23,7 +23,9 @@
   const location4 =  document.getElementById("location4");
   const location5 =  document.getElementById("location5");
   const location6 =  document.getElementById("location6");
+
   const checkbox1 = document.getElementById("checkbox1");
+  const checkbox1Error = checkbox1.parentElement;
 
 
   // ------------- STOP DEFAULT BROWSER ACTIONS -------------//
@@ -134,7 +136,16 @@
   //--validation condition d'utilisation
   if (!checkbox1.checked){
     console.log("Veuillez lire et accepter les condtions d'utilisation.");
-  }
+     // récuperation du dernier element de la div et modification du texte
+     checkbox1Error.lastElementChild.textContent = "Veuillez lire et accepter les condtions d'utilisation.";
+     // affichage du message d'erreur
+     checkbox1Error.lastElementChild.style.display = "block";
+   } else {
+     // cacher le message d'erreur
+     checkbox1Error.lastElementChild.style.display="none";
+   }
+
+  
   } 
   )
 
