@@ -8,6 +8,7 @@ const modalBtn = document.querySelectorAll(".modal-btn");
 const modalClose = document.querySelector(".form-close");
 // const formData = document.querySelectorAll(".formData");
 
+
 //-------------------------------------------------------------------//
 
 //--------//
@@ -43,7 +44,6 @@ function closeModal() {
   modalbg.style.display = "none";
 }
 
-//-------------------------------------------------------------------//
 
 
 

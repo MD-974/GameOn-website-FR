@@ -5,13 +5,15 @@
   const firstNameInput = document.getElementById("first");
   const firstNameError = firstNameInput.parentElement;
 
-
   const lastNameInput = document.getElementById("last");
   const lastNameError = lastNameInput.parentElement;
+  
   const emailInput = document.getElementById("email");
   const emailError = emailInput.parentElement;
+  
   const birthdateInput = document.getElementById("birthdate");
   const birthdateError = birthdateInput.parentElement;
+  
   const quantityInput = document.getElementById("quantity");
   const quantityError = quantityInput.parentElement;
 
@@ -150,6 +152,4 @@
   } 
   )
 
-
-
-            
+          
