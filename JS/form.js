@@ -72,12 +72,17 @@
         console.log("Le Nom est requis.");
         lastNameError.lastElementChild.textContent = "Le Nom est requis.";// récuperation du dernier element de la div et modification du texte
         lastNameError.lastElementChild.style.display = "block";// affichage du message d'erreur
+        lastNameInput.style.borderColor = "red";
+        lastNameInput.style.borderWidth = "2px";
       } else if (lastNameInput.value.length < 2) {
         console.log("Le Nom doit faire plus de 2 caractères.");
         lastNameError.lastElementChild.textContent="Le Nom doit faire plus de 2 caractères.";// récuperation du dernier element de la div et modification du texte
         lastNameError.lastElementChild.style.display="block";// affichage du message d'erreur
+        lastNameInput.style.borderColor = "red";
+        lastNameInput.style.borderWidth = "2px";
       } else {
         lastNameError.lastElementChild.style.display="none";// cacher le message d'erreur
+        lastNameInput.style = "default"
       }
 
     //--récupération de la valeur l'email
@@ -88,12 +93,17 @@
       console.log("L'Email est requis.");
       emailError.lastElementChild.textContent = "L'Email est requis.";// récuperation du dernier element de la div et modification du texte
       emailError.lastElementChild.style.display = "block";// affichage du message d'erreur
+      emailInput.style.borderColor = "red"
+      emailInput.style.borderWidth = "2px"
     } else if (!regexEmail.test(emailInput.value)){
       console.log("L'Email n'est pas au bon format.");
       emailError.lastElementChild.textContent = "L'Email n'est pas au bon format ( exemple@email.fr ).";// récuperation du dernier element de la div et modification du texte
       emailError.lastElementChild.style.display = "block";// affichage du message d'erreur
+      emailInput.style.borderColor = "red"
+      emailInput.style.borderWidth = "2px"
     } else {     
       emailError.lastElementChild.style.display="none";// cacher le message d'erreur
+      emailInput.style = "default"
     }
 
 
@@ -105,8 +115,11 @@
       console.log("Veuillez indiquer une date de naissance.");
       birthdateError.lastElementChild.textContent = "Veuillez indiquer une date de naissance.";// récuperation du dernier element de la div et modification du texte
       birthdateError.lastElementChild.style.display = "block";// affichage du message d'erreur
+      birthdateInput.style.borderColor = "red";
+      birthdateInput.style.borderWidth = "2px";
     } else {
       birthdateError.lastElementChild.style.display="none";// cacher le message d'erreur
+      birthdateInput.style ="default"
     }
     
 
@@ -119,8 +132,11 @@
       
       quantityError.lastElementChild.textContent = "Veuillez indiquer le nombre de participation entre 0-99.";// récuperation du dernier element de la div et modification du texte
       quantityError.lastElementChild.style.display = "block";// affichage du message d'erreur
+      quantityInput.style.borderColor = "red";
+      quantityInput.style.borderWidth = "2px";
     } else {
       quantityError.lastElementChild.style.display="none";// cacher le message d'erreur
+      quantityInput.style ="default"
     }
     
     //--validation selection de la ville
@@ -132,7 +148,6 @@
       locationsError.lastElementChild.style.display = "block";
     }  else {
       locationsError.lastElementChild.style.display = "none";
-
      }
   //   if (!locations.checked){
   //       // récuperation du dernier element de la div et modification du texte

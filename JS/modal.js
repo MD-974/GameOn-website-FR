@@ -6,6 +6,12 @@
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const modalClose = document.querySelector(".form-close");
+
+//  pour la confirm message----------------------------------------
+// const confirmBtn = document.querySelector(".confirm-modal-btn")
+// const confirmClose = document.querySelector(".confirm-close")
+// -----------------------------------------------------------------
+
 // const formData = document.querySelectorAll(".formData");
 
 
@@ -19,6 +25,8 @@ const modalClose = document.querySelector(".form-close");
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 // close modal event
 modalClose.addEventListener("click", closeModal);
+
+// confirmClose.addEventListener("click", closeConfirm);
 
 //-------------------------------------------------------------------//
 
@@ -44,6 +52,10 @@ function closeModal() {
   modalbg.style.display = "none";
 }
 
+// close confirm message-----------
+// function confirmClose() {
+//   modalbg.style.display = "none";
+// }-------------------------------
 
 
 

@@ -212,6 +212,14 @@ input[data-error]::after {
   left: -30px;
   top: -1px;
   transition: 0.3s; }
+
+  .checkbox-icon-error {
+    border: 2px solid red;
+    border-radius: 50%;
+  }
+
+
+
 .checkbox-label .checkbox-icon::after,
 .checkbox2-label .checkbox-icon::after {
   content: "";
