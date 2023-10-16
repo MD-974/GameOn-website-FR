@@ -4,7 +4,6 @@
 
   const firstNameInput = document.getElementById("first");
   const firstNameError = firstNameInput.parentElement;
-  // const firstNameBorder = document.getElementsByClassName("text-control-error")
 
 
   const lastNameInput = document.getElementById("last");
@@ -49,7 +48,6 @@
         console.log("Le Prénom est requis.");
         firstNameError.lastElementChild.textContent = "Le Prénom est requis.";// récuperation du dernier element de la div et modification du texte
         firstNameError.lastElementChild.style.display = "block";// affichage du message d'erreur
-        // firstNameBorder.style.border = "block";
       } else if (firstNameInput.value.length < 2) {
         console.log("Le Prénom doit faire plus de 2 caractères.");
         firstNameError.lastElementChild.textContent="Le Prénom doit faire plus de 2 caractères.";// récuperation du dernier element de la div et modification du texte
