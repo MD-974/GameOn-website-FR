@@ -50,12 +50,18 @@
         console.log("Le Prénom est requis.");
         firstNameError.lastElementChild.textContent = "Le Prénom est requis.";// récuperation du dernier element de la div et modification du texte
         firstNameError.lastElementChild.style.display = "block";// affichage du message d'erreur
+        firstNameInput.style.borderColor = "red";
+        firstNameInput.style.borderWidth = "2px";
       } else if (firstNameInput.value.length < 2) {
         console.log("Le Prénom doit faire plus de 2 caractères.");
         firstNameError.lastElementChild.textContent="Le Prénom doit faire plus de 2 caractères.";// récuperation du dernier element de la div et modification du texte
         firstNameError.lastElementChild.style.display="block";// affichage du message d'erreur
+        firstNameInput.style.borderColor = "red";
+        firstNameInput.style.borderWidth = "2px";
       } else {
         firstNameError.lastElementChild.style.display="none";// cacher le message d'erreur
+        firstNameInput.style = "default";
+         
       }
       
 
