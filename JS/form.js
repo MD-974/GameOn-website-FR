@@ -16,7 +16,7 @@
   
   const quantityInput = document.getElementById("quantity");
   const quantityError = quantityInput.parentElement;
-
+ 
   const location1 = document.getElementById("location1");
   // const location1Error = location1.parentElement;
   const location2 =  document.getElementById("location2");
