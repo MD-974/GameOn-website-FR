@@ -33,17 +33,22 @@
   const locationsError = locationError.parentElement;
   // const locations = document.querySelectorAll(type[radio])
   // const locationsError=locations.parentElement;
-
   const checkbox1 = document.getElementById("checkbox1");
   const checkbox1Error = checkbox1.parentElement;
+  
+
+  //-------------------------REGEX---------------------------//
+  const regexFirstLast = /^([A-Za-z]{2,20})?([-]{0,1})?([.]{0,1})?([A-Za-z]{2,20})$/;
+  const regexEmail = /^[A-Za-z0-9\.\-]+@([A-Za-z0-9\.\-]+\.[A-Za-z]{2,4})$/;
+  const regexBirthdate = /^([0-9]{2})|([0-9]{2})|([0-9]{4})$/;
+  const regexQuantity = /^[0-9]$/;
 
 
   // ------------- STOP DEFAULT BROWSER ACTIONS -------------//
   form.addEventListener("submit", (event) => {
     event.preventDefault()
 
-    //--récupération de la valeur de l’input "first" et "last"
-  const regexFirstLast = /^([A-Za-z]{2,20})?([-]{0,1})?([.]{0,1})?([A-Za-z]{2,20})$/
+    //--récupération de la valeur de l’input
   console.log(firstNameInput.value)
     //--vérification  des requis de validation
     if (firstNameInput.value == "") {
@@ -89,7 +94,6 @@
       }
 
     //--récupération de la valeur l'email
-    const regexEmail = /^[A-Za-z0-9\.\-]+@([A-Za-z0-9\.\-]+\.[A-Za-z]{2,4})$/;
       console.log(emailInput.value)
     //--vérification  des requis de validation  
     if (emailInput.value == "") {
@@ -106,12 +110,13 @@
       emailInput.style.borderWidth = "2px"
     } else {     
       emailError.lastElementChild.style.display="none";// cacher le message d'erreur
-      emailInput.style = "default"
+      // emailInput.style = "default"
+      emailInput.style.borderColor = "green";// affichage de la bordure en vert
+      emailInput.style.borderWidth = "3px";
     }
 
 
     //--validation de la date de naissance
-    const regexBirthdate = /^([0-9]{2})|([0-9]{2})|([0-9]{4})$/;
      console.log(birthdateInput.value)
     //--vérification  des requis de validation
      if (birthdateInput.value == "") {
@@ -122,12 +127,13 @@
       birthdateInput.style.borderWidth = "2px";
     } else {
       birthdateError.lastElementChild.style.display="none";// cacher le message d'erreur
-      birthdateInput.style ="default"
+      // birthdateInput.style ="default"
+      birthdateInput.style.borderColor = "green";// affichage de la bordure en vert
+      birthdateInput.style.borderWidth = "3px";
     }
     
 
     //--validation nombre de participation
-    const regexQuantity = /^[0-9]$/;
       console.log(quantityInput.value);
     //--vérification  des requis de validation  
       if (quantityInput.value == "") {
@@ -139,7 +145,9 @@
       quantityInput.style.borderWidth = "2px";
     } else {
       quantityError.lastElementChild.style.display="none";// cacher le message d'erreur
-      quantityInput.style ="default"
+      // quantityInput.style ="default"
+      quantityInput.style.borderColor = "green";// affichage de la bordure en vert
+      quantityInput.style.borderWidth = "3px";
     }
     
     //--validation selection de la ville
