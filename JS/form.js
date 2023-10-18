@@ -42,26 +42,27 @@
   form.addEventListener("submit", (event) => {
     event.preventDefault()
 
-
     //--récupération de la valeur de l’input "first"
-    console.log(firstNameInput.value)
+  const regexFirst = /^([A-Za-z]{2,20})?([-]{0,1})?([A-Za-z]{2,20})$/
+  console.log(firstNameInput.value)
     //--vérification  des requis de validation
     if (firstNameInput.value == "") {
         console.log("Le Prénom est requis.");
         firstNameError.lastElementChild.textContent = "Le Prénom est requis.";// récuperation du dernier element de la div et modification du texte
         firstNameError.lastElementChild.style.display = "block";// affichage du message d'erreur
-        firstNameInput.style.borderColor = "red";
+        firstNameInput.style.borderColor = "red";// affichage de la bordure en rouge
         firstNameInput.style.borderWidth = "2px";
-      } else if (firstNameInput.value.length < 2) {
+      } else if (!regexFirst.test(firstNameInput.value)) {
         console.log("Le Prénom doit faire plus de 2 caractères.");
         firstNameError.lastElementChild.textContent="Le Prénom doit faire plus de 2 caractères.";// récuperation du dernier element de la div et modification du texte
         firstNameError.lastElementChild.style.display="block";// affichage du message d'erreur
-        firstNameInput.style.borderColor = "red";
+        firstNameInput.style.borderColor = "red";// affichage de la bordure en rouge
         firstNameInput.style.borderWidth = "2px";
       } else {
         firstNameError.lastElementChild.style.display="none";// cacher le message d'erreur
-        firstNameInput.style = "default";
-         
+        // firstNameInput.style = "default";
+        firstNameInput.style.borderColor = "green";// affichage de la bordure en vert
+        firstNameInput.style.borderWidth = "3px";
       }
       
 
