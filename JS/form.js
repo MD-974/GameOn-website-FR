@@ -42,8 +42,8 @@
   form.addEventListener("submit", (event) => {
     event.preventDefault()
 
-    //--récupération de la valeur de l’input "first"
-  const regexFirst = /^([A-Za-z]{2,20})?([-]{0,1})?([A-Za-z]{2,20})$/
+    //--récupération de la valeur de l’input "first" et "last"
+  const regexFirstLast = /^([A-Za-z]{2,20})?([-]{0,1})?([.]{0,1})?([A-Za-z]{2,20})$/
   console.log(firstNameInput.value)
     //--vérification  des requis de validation
     if (firstNameInput.value == "") {
@@ -52,7 +52,7 @@
         firstNameError.lastElementChild.style.display = "block";// affichage du message d'erreur
         firstNameInput.style.borderColor = "red";// affichage de la bordure en rouge
         firstNameInput.style.borderWidth = "2px";
-      } else if (!regexFirst.test(firstNameInput.value)) {
+      } else if (!regexFirstLast.test(firstNameInput.value)) {
         console.log("Le Prénom doit faire plus de 2 caractères.");
         firstNameError.lastElementChild.textContent="Le Prénom doit faire plus de 2 caractères.";// récuperation du dernier element de la div et modification du texte
         firstNameError.lastElementChild.style.display="block";// affichage du message d'erreur
@@ -75,7 +75,7 @@
         lastNameError.lastElementChild.style.display = "block";// affichage du message d'erreur
         lastNameInput.style.borderColor = "red";
         lastNameInput.style.borderWidth = "2px";
-      } else if (lastNameInput.value.length < 2) {
+      } else if (!regexFirstLast.test(lastNameInput.value)) {
         console.log("Le Nom doit faire plus de 2 caractères.");
         lastNameError.lastElementChild.textContent="Le Nom doit faire plus de 2 caractères.";// récuperation du dernier element de la div et modification du texte
         lastNameError.lastElementChild.style.display="block";// affichage du message d'erreur
@@ -83,7 +83,9 @@
         lastNameInput.style.borderWidth = "2px";
       } else {
         lastNameError.lastElementChild.style.display="none";// cacher le message d'erreur
-        lastNameInput.style = "default"
+        // lastNameInput.style = "default"
+        lastNameInput.style.borderColor = "green";// affichage de la bordure en vert
+        lastNameInput.style.borderWidth = "3px";
       }
 
     //--récupération de la valeur l'email
