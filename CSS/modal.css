@@ -278,21 +278,36 @@ input[data-error]::after {
 .close:after {
   transform: rotate(-45deg); }
   /* ajout de la mise en forme du message */
-.confirm-modal-message {
+/* .confirm-modal-message {
   text-align: center;
   padding-bottom: 30px;
-}
-.btn-submit, .btn-signup, .confirm-modal-btn{
+} */
+
+/* ajout de(button) pour le mettre en
+forme comme les autres boutons */
+.btn-submit, .btn-signup, button{
   background: #fe142f;
   display: block;
   margin: 0 auto;
-  border-radius: 7px;
+  border-radius:7px;
   font-size: 1rem;
   padding: 12px 82px;
   color: #fff;
   cursor: pointer;
-  border: 0; }
-
+  border: 0;
+  -webkit-border-radius:7px;
+  -moz-border-radius:7px;
+  -ms-border-radius:7px;
+  -o-border-radius:7px;
+}
+/* mise en forme(button) via la class = btn-validation */
+.btn-validation {
+  margin: 200px auto 50px;
+}
+/* p .valdation {
+  text-align: center;
+  color: green;
+} */
 /* custom select styles */
 .custom-select {
   position: relative;
@@ -454,25 +469,21 @@ footer {
     margin-top: 50px;
     text-align: center; }
 }
+
 #location-error {
   display: none; 
   color: #FF4E60;
   font-size: 10px;
   text-align: left;
 }
-/* .text-control-error {
-  border: none;
-  border: #f00;
-} */
+
 .error {
   display: none; 
   color: #FF4E60;
   font-size: 10px;
   text-align: left;
 } 
-/*.errorLast {
-   display: none;
-  color: #e54858;
-  font-size: small;
-}  */
+/* p {
+  text-align: center;
 
+} */
