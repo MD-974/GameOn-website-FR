@@ -277,11 +277,6 @@ input[data-error]::after {
   transform: rotate(45deg); }
 .close:after {
   transform: rotate(-45deg); }
-  /* ajout de la mise en forme du message */
-/* .confirm-modal-message {
-  text-align: center;
-  padding-bottom: 30px;
-} */
 
 /* ajout de(button) pour le mettre en
 forme comme les autres boutons */
@@ -302,12 +297,8 @@ forme comme les autres boutons */
 }
 /* mise en forme(button) via la class = btn-validation */
 .btn-validation {
-  margin: 200px auto 50px;
+  margin: 100px auto 50px;
 }
-/* p .valdation {
-  text-align: center;
-  color: green;
-} */
 /* custom select styles */
 .custom-select {
   position: relative;
@@ -483,7 +474,10 @@ footer {
   font-size: 10px;
   text-align: left;
 } 
-/* p {
+p.validation {
   text-align: center;
+  font-size: 25px;
+  margin-top: 50px;
+  color: green;
 
-} */
+}

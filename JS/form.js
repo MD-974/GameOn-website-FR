@@ -189,22 +189,23 @@
       checkbox1Error.lastElementChild.style.display="none";
     }
 
-    //----------------REMPLACEMENT DU FORM PAR UN MESSAGE DE VALIDATION--------------//
+
+    //-----------DEBUT REMPLACEMENT DU FORM PAR UN MESSAGE DE VALIDATION--------------//
 
     //-- Si aucune erreur dans les champs du formulaire
     // on peut le soumettre à l'envoi
     if (formValid == true) {
 
-      // 1 -->Supprimer l'élement formulaire(form) du DOM.
+      // 1 -->Supprimer l'élement (form) du DOM.
       form.remove();
 
-      // 2 -->Affichage d'un message de validation du formulaire.
+      // 2 -->Affichage d'un message de validation "Merci,pour votre inscription.".
            // 2.a: Ciblage de l'élement(modal-body).        
       const modalBody = document.querySelector(".modal-body");
            // 2.b: Création d'un nouvelle élement HTML(p).
       const paragraphe = document.createElement("p");
       paragraphe.classList.add("validation")
-      paragraphe.textContent = "Merci pour votre inscription";
+      paragraphe.textContent = "Merci, pour votre inscription.";
            // 2.c: Création d'un nouvelle élement HTML(button)et d'une class(btn-validation).
       const boutonValidation = document.createElement("button")
       boutonValidation.classList.add("btn-validation")
@@ -214,7 +215,7 @@
       modalBody.append(paragraphe);
       modalBody.append(boutonValidation);
 
-    //----------------------------FIN-------------------------------//
+    //-------------FIN REMPLACEMENT DU FORM PAR UN MESSAGE DE VALIDATION--------------//
     }
 
     } 
