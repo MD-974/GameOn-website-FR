@@ -196,7 +196,8 @@ input[data-error]::after {
 .checkbox-label,
 .checkbox2-label {
   position: relative;
-  margin-left: 36px;
+  /* margin-left: passer de 36px à 34px */
+  margin-left: 34px;
   font-size: 12px;
   font-weight: normal; }
 .checkbox-label .checkbox-icon,
@@ -432,8 +433,8 @@ footer {
   }
 
   @media screen and (max-width: 800px) {
-    .hero-section {
-      display: block;
+  .hero-section {
+    display: block;
     box-shadow: unset; }
   .hero-content {
     background: #fff;
@@ -444,8 +445,12 @@ footer {
   .hero-content .btn-signup {
     display: none; }
   .hero-headline {
-    font-size: 4.5rem;
-    white-space: normal; }
+    /* changement de font-size de 4.5 à 2.5rem */
+    font-size: 2.5rem;
+    white-space: normal;
+    /* ajout de font-weight & line-height */
+    font-weight: 500;
+    line-height: 50px; }
   .hero-text {
     width: unset;
     font-size: 1.5rem; }
@@ -478,4 +483,10 @@ p.validation {
   text-align: center;
   font-size: 36px;
   margin-top: 50px;
+}
+
+@media screen and (max-width: 450px){
+  .btn-submit, .btn-signup, button {
+    padding: 12px 40px;
+  }
 }
