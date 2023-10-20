@@ -518,9 +518,8 @@ footer {
   margin-top: -15px; }}  
 
 @media screen and (max-width: 450px){
-  .btn-submit, .btn-signup, button {
-    padding: 12px 40px;
-  }}
+.btn-submit, .btn-signup, button {
+  padding: 12px 40px;}}
 /* -----------------FIN MEDIA-QUERIES----------- */
 
 @keyframes modalopen {
