@@ -469,8 +469,9 @@ footer {
   float: none;
   display: block;
   text-align: left; }}
-
+  
 @media screen and (max-width: 800px) {
+
 .hero-section {
   display: block;
   box-shadow: unset; }
@@ -497,19 +498,25 @@ footer {
 .hero-text {
   width: unset;
   font-size: 1.5rem; }
-
 .hero-img img {
   border-radius: 10px;
   margin-top: 40px; }
 
 .hero-section > .btn-signup {
   display: block;
-  margin: 32px auto 10px;
-  padding: 12px 35px; }
+  margin: 35px auto 10px;
+  /* pour le centrage et mise en forme du boutton et du texte */
+  height: 31px;
+  width: 141px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding: 8px 34px; }
 
 .copyrights {
-  margin-top: 50px;
-  text-align: center; }}
+  /* margin-top: 50px; */
+  text-align: center; 
+  font-size: 10px;}}
 
 @media screen and (max-width: 540px) {
 .topnav {
