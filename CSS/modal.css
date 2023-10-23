@@ -33,7 +33,7 @@ img {
   float: left; }
 
 .main-navbar {
-  float: right; }
+  float: right;}
 
 .topnav a {
   float: left;
@@ -368,7 +368,7 @@ input[data-error]::after {
   color: #fff;
   position: relative;
   text-align: left; 
-  min-width: 424px; }
+  /* min-width: 424px;*/}
 
 .hero-content::after {
   content: "";
@@ -449,7 +449,8 @@ footer {
 /* -----------------DEBUT MEDIA-QUERIES--------- */
 @media screen and (max-width: 1130px) {
 .topnav a {
-  display: none; }
+  display: none;
+  margin-top: 5px;}
   
 .topnav a.icon {
   display: block; }
@@ -513,7 +514,7 @@ footer {
   display:block;
 }
 .topnav a {
- display: none; }
+ display: none;}
 
 .topnav a.icon {
 /* float: right; */
@@ -524,6 +525,8 @@ footer {
 @media screen and (max-width: 450px){
 .btn-submit, .btn-signup, button {
   padding: 12px 40px;}}
+
+
 /* -----------------FIN MEDIA-QUERIES----------- */
 
 @keyframes modalopen {
