@@ -172,16 +172,16 @@ if (!location1.checked && !location2.checked && !location3.checked
 
 //--validation condition d'utilisation
 if (!checkbox1.checked){
- console.log("Veuillez lire et accepter les condtions d'utilisation.");
- // récuperation du dernier element de la div et modification du texte
- checkbox1Error.lastElementChild.textContent = "Veuillez lire et accepter les condtions d'utilisation.";
- // affichage du message d'erreur
- checkbox1Error.lastElementChild.style.display = "block";
- formValid = false; // formValid mise en (false) dans les vérifications non valides
- } else {
-  // cacher le message d'erreur
-  checkbox1Error.lastElementChild.style.display="none";
-  }
+  console.log("Veuillez lire et accepter les condtions d'utilisation.");
+  // récuperation du dernier element de la div et modification du texte
+  checkbox1Error.lastElementChild.textContent = "Veuillez lire et accepter les condtions d'utilisation.";
+  // affichage du message d'erreur
+  checkbox1Error.lastElementChild.style.display = "block";
+  formValid = false; // formValid mise en (false) dans les vérifications non valides
+  } else {
+    // cacher le message d'erreur
+    checkbox1Error.lastElementChild.style.display="none";
+    }
 
 
 //-----------DEBUT REMPLACEMENT DU FORM PAR UN MESSAGE DE VALIDATION--------------//

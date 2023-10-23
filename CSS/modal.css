@@ -33,7 +33,7 @@ img {
   float: left; }
 
 .main-navbar {
-  float: right;}
+  float: right; }
 
 .topnav a {
   float: left;
@@ -142,7 +142,9 @@ main {
 
 .modal-body {
   padding: 15px 8%;
-  margin: 15px auto; }
+  margin: 15px auto;
+  /* pour mettre la longueur */
+  height: 827.74px; }
 
 label {
   font-family: var(--font-default);
@@ -450,7 +452,7 @@ footer {
 @media screen and (max-width: 1130px) {
 .topnav a {
   display: none;
-  margin-top: 5px;}
+  }
   
 .topnav a.icon {
   display: block; }
