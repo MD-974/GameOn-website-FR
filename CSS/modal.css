@@ -290,7 +290,7 @@ input[data-error]::after {
 
 /* mise en forme(button) via la class = btn-validation */
 .btn-validation {
-  margin: 100px auto 50px;
+  margin: 350px auto 150px;
 }
 /* custom select styles */
 .custom-select {
@@ -430,7 +430,7 @@ p.validation {
 /* creation dans le form.js pour le message de validation formulaire */
   text-align: center;
   font-size: 36px;
-  margin-top: 50px;}
+  margin-top: 200px;}
 
 .hero-section > .btn-signup {
   display: none; }
