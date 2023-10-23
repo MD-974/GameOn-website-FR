@@ -135,7 +135,8 @@ if (birthdateInput.value == "") {
 
 //--validation nombre de participation
 console.log(quantityInput.value);
-//--vérification  des requis de validation  
+//--vérification  des requis de validation 
+
 // if (quantityInput.value == "") {
 //   console.log("Veuillez indiquer le nombre de participation entre 0-99.");
 //   quantityError.lastElementChild.textContent = "Veuillez indiquer le nombre de participation entre 0-99.";// récuperation du dernier element de la div et modification du texte
@@ -144,6 +145,7 @@ console.log(quantityInput.value);
 //   quantityInput.style.borderWidth = "2px";
 //   formValid = false; // formValid mise en (false) dans les vérifications non valides
 //   } else 
+
   if (!regexQuantity.test(quantityInput.value)) {
   console.log("Veuillez indiquer le nombre de participation entre 0-99.");
   quantityError.lastElementChild.textContent = "Veuillez indiquer le nombre de participation entre 0-99.";// récuperation du dernier element de la div et modification du texte

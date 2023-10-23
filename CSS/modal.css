@@ -509,13 +509,17 @@ footer {
   text-align: center; }}
 
 @media screen and (max-width: 540px) {
+.topnav {
+  display:block;
+}
 .topnav a {
  display: none; }
 
 .topnav a.icon {
 /* float: right; */
   display: block;
-  margin-top: -15px; }}  
+/* changement de -15px en 5 px pour l icon pour l'ajuster */
+  margin-top: 5px; }}  
 
 @media screen and (max-width: 450px){
 .btn-submit, .btn-signup, button {
