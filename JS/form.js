@@ -35,7 +35,7 @@ const checkbox1Error = checkbox1.parentElement;
 const regexFirstLast = /^([A-Za-z]{2,20})?([-]{0,1})?([.]{0,1})?([A-Za-z]{2,20})$/;
 const regexEmail = /^[A-Za-z0-9\.\-]+@([A-Za-z0-9\.\-]+\.[A-Za-z]{2,4})$/;
 const regexBirthdate = /^([0-9]{2})|([0-9]{2})|([0-9]{4})$/;
-const regexQuantity = /^[0-9]$/;
+const regexQuantity = /^[0-9]{1,2}$/;
 
 
 // ------------- STOP DEFAULT BROWSER ACTIONS -------------//
@@ -136,7 +136,15 @@ if (birthdateInput.value == "") {
 //--validation nombre de participation
 console.log(quantityInput.value);
 //--vérification  des requis de validation  
-if (quantityInput.value == "") {
+// if (quantityInput.value == "") {
+//   console.log("Veuillez indiquer le nombre de participation entre 0-99.");
+//   quantityError.lastElementChild.textContent = "Veuillez indiquer le nombre de participation entre 0-99.";// récuperation du dernier element de la div et modification du texte
+//   quantityError.lastElementChild.style.display = "block";// affichage du message d'erreur
+//   quantityInput.style.borderColor = "red";
+//   quantityInput.style.borderWidth = "2px";
+//   formValid = false; // formValid mise en (false) dans les vérifications non valides
+//   } else 
+  if (!regexQuantity.test(quantityInput.value)) {
   console.log("Veuillez indiquer le nombre de participation entre 0-99.");
   quantityError.lastElementChild.textContent = "Veuillez indiquer le nombre de participation entre 0-99.";// récuperation du dernier element de la div et modification du texte
   quantityError.lastElementChild.style.display = "block";// affichage du message d'erreur
