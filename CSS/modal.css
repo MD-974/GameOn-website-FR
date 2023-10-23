@@ -142,9 +142,9 @@ main {
 
 .modal-body {
   padding: 15px 8%;
-  margin: 15px auto;
+  margin: 15px auto;}
   /* pour mettre la longueur */
-  height: 827.74px; }
+  /* height: 827.74px; } */
 
 label {
   font-family: var(--font-default);
@@ -290,7 +290,7 @@ input[data-error]::after {
 
 /* mise en forme(button) via la class = btn-validation */
 .btn-validation {
-  margin: 350px auto 150px;
+  margin: 250px auto 150px;
 }
 /* custom select styles */
 .custom-select {
@@ -479,7 +479,7 @@ footer {
 .hero-content {
   background: #fff;
   color: #000;
-  padding: 20px; }
+  padding: 0 10px; }
 
 .hero-content::after {
   content: unset; }
@@ -514,7 +514,7 @@ footer {
   padding: 8px 34px; }
 
 .copyrights {
-  /* margin-top: 50px; */
+  margin-top: 0px;
   text-align: center; 
   font-size: 10px;}}
 
@@ -532,6 +532,11 @@ footer {
   margin-top: 5px; }}  
 
 @media screen and (max-width: 450px){
+.header-logo img {
+  width: 110px;
+  height: 20px;
+  margin: 15px;
+}
 .btn-submit, .btn-signup, button {
   padding: 12px 40px;}}
 
