@@ -1,4 +1,4 @@
-//--------------------- DOM ELEMENTS ----------------------//
+//----- DOM ELEMENTS -----//
 
 const form = document.querySelector("form");
 
@@ -31,41 +31,50 @@ const checkbox1 = document.getElementById("checkbox1");
 const checkbox1Error = checkbox1.parentElement;
             
 
-//-------------------------REGEX---------------------------//
+//----- REGEX -----//
 const regexFirstLast = /^([A-Za-z]{2,20})?([-]{0,1})?([.]{0,1})?([A-Za-z]{2,20})$/;
 const regexEmail = /^[A-Za-z0-9\.\-]+@([A-Za-z0-9\.\-]+\.[A-Za-z]{2,4})$/;
 const regexBirthdate = /^([0-9]{2})|([0-9]{2})|([0-9]{4})$/;
 const regexQuantity = /^[0-9]{1,2}$/;
 
 
-// ------------- STOP DEFAULT BROWSER ACTIONS -------------//
+// ----- STOP DEFAULT BROWSER ACTIONS -----//
 form.addEventListener("submit", (event) => {
 event.preventDefault()
 
-//--Création d'une variable(formValid)
-//qui considère le formulaire comme valide par défaut
+//----- CREATION D'UNE VARIABLE(formValid) -----//
+
+//-- 1: considèrer le formulaire comme valide par défaut
 let formValid = true;
-//--récupération de la valeur de l’input
+//-- 2: récupération de la valeur de l’input
 console.log(firstNameInput.value)
-//--vérification  des requis de validation
+//-- 3: vérification  des requis de validation
 if (firstNameInput.value == "") {
   console.log("Le Prénom est requis.");
+
   firstNameError.lastElementChild.textContent = "Le Prénom est requis.";// récuperation du dernier element de la div et modification du texte
   firstNameError.lastElementChild.style.display = "block";// affichage du message d'erreur
   firstNameInput.style.borderColor = "red";// affichage de la bordure en rouge
-  firstNameInput.style.borderWidth = "2px";
+  firstNameInput.style.borderWidth = "2px";// epaisseur de la bordure rouge 
+
   formValid = false; // formValid mise en (false) dans les vérifications non valides
+
   } else if (!regexFirstLast.test(firstNameInput.value)) {
     console.log("Le Prénom doit faire plus de 2 caractères.");
+
     firstNameError.lastElementChild.textContent="Le Prénom doit faire plus de 2 caractères.";// récuperation du dernier element de la div et modification du texte
     firstNameError.lastElementChild.style.display="block";// affichage du message d'erreur
     firstNameInput.style.borderColor = "red";// affichage de la bordure en rouge
-    firstNameInput.style.borderWidth = "2px";
+    firstNameInput.style.borderWidth = "2px";// epaisseur de la bordure rouge
+
     formValid = false; // formValid mise en (false) dans les vérifications non valides
+
     } else {
+
       firstNameError.lastElementChild.style.display="none";// cacher le message d'erreur
       firstNameInput.style.borderColor = "green";// affichage de la bordure en vert
-      firstNameInput.style.borderWidth = "3px";
+      firstNameInput.style.borderWidth = "3px";// epaisseur de la bordure verte
+
       }
               
 
@@ -74,21 +83,27 @@ console.log(lastNameInput.value)
 //--vérification  des requis de validation
 if (lastNameInput.value == "") {
   console.log("Le Nom est requis.");
-  lastNameError.lastElementChild.textContent = "Le Nom est requis.";// récuperation du dernier element de la div et modification du texte
-  lastNameError.lastElementChild.style.display = "block";// affichage du message d'erreur
+
+  lastNameError.lastElementChild.textContent = "Le Nom est requis.";
+  lastNameError.lastElementChild.style.display = "block";
   lastNameInput.style.borderColor = "red";
   lastNameInput.style.borderWidth = "2px";
-  formValid = false; // formValid mise en (false) dans les vérifications non valides
+
+  formValid = false;
+
   } else if (!regexFirstLast.test(lastNameInput.value)) {
     console.log("Le Nom doit faire plus de 2 caractères.");
-    lastNameError.lastElementChild.textContent="Le Nom doit faire plus de 2 caractères.";// récuperation du dernier element de la div et modification du texte
-    lastNameError.lastElementChild.style.display="block";// affichage du message d'erreur
+
+    lastNameError.lastElementChild.textContent="Le Nom doit faire plus de 2 caractères.";
+    lastNameError.lastElementChild.style.display="block";
     lastNameInput.style.borderColor = "red";
     lastNameInput.style.borderWidth = "2px";
-    formValid = false; // formValid mise en (false) dans les vérifications non valides
+
+    formValid = false;
+    
     } else {
-      lastNameError.lastElementChild.style.display="none";// cacher le message d'erreur
-      lastNameInput.style.borderColor = "green";// affichage de la bordure en vert
+      lastNameError.lastElementChild.style.display="none";
+      lastNameInput.style.borderColor = "green";
       lastNameInput.style.borderWidth = "3px";
       }
 
@@ -97,21 +112,27 @@ console.log(emailInput.value)
 //--vérification  des requis de validation  
 if (emailInput.value == "") {
   console.log("L'Email est requis.");
-  emailError.lastElementChild.textContent = "L'Email est requis.";// récuperation du dernier element de la div et modification du texte
-  emailError.lastElementChild.style.display = "block";// affichage du message d'erreur
+
+  emailError.lastElementChild.textContent = "L'Email est requis.";
+  emailError.lastElementChild.style.display = "block";
   emailInput.style.borderColor = "red"
   emailInput.style.borderWidth = "2px"
-  formValid = false; // formValid mise en (false) dans les vérifications non valides
+
+  formValid = false;
+
   } else if (!regexEmail.test(emailInput.value)){
     console.log("L'Email n'est pas au bon format.");
-    emailError.lastElementChild.textContent = "L'Email n'est pas au bon format ( exemple@email.fr ).";// récuperation du dernier element de la div et modification du texte
-    emailError.lastElementChild.style.display = "block";// affichage du message d'erreur
+
+    emailError.lastElementChild.textContent = "L'Email n'est pas au bon format ( exemple@email.fr ).";
+    emailError.lastElementChild.style.display = "block";
     emailInput.style.borderColor = "red"
     emailInput.style.borderWidth = "2px"
-    formValid = false; // formValid mise en (false) dans les vérifications non valides
+
+    formValid = false;
+
     } else {     
-      emailError.lastElementChild.style.display="none";// cacher le message d'erreur
-      emailInput.style.borderColor = "green";// affichage de la bordure en vert
+      emailError.lastElementChild.style.display="none";
+      emailInput.style.borderColor = "green";
       emailInput.style.borderWidth = "3px";
       }
 
@@ -121,14 +142,17 @@ console.log(birthdateInput.value)
 //--vérification  des requis de validation
 if (birthdateInput.value == "") {
   console.log("Veuillez indiquer une date de naissance.");
-  birthdateError.lastElementChild.textContent = "Veuillez indiquer une date de naissance.";// récuperation du dernier element de la div et modification du texte
-  birthdateError.lastElementChild.style.display = "block";// affichage du message d'erreur
+
+  birthdateError.lastElementChild.textContent = "Veuillez indiquer une date de naissance.";
+  birthdateError.lastElementChild.style.display = "block";
   birthdateInput.style.borderColor = "red";
   birthdateInput.style.borderWidth = "2px";
-  formValid = false; // formValid mise en (false) dans les vérifications non valides
+
+  formValid = false;
+
   } else {
-    birthdateError.lastElementChild.style.display="none";// cacher le message d'erreur
-    birthdateInput.style.borderColor = "green";// affichage de la bordure en vert
+    birthdateError.lastElementChild.style.display="none";
+    birthdateInput.style.borderColor = "green";
     birthdateInput.style.borderWidth = "3px";
     }
             
@@ -136,26 +160,19 @@ if (birthdateInput.value == "") {
 //--validation nombre de participation
 console.log(quantityInput.value);
 //--vérification  des requis de validation 
-
-// if (quantityInput.value == "") {
-//   console.log("Veuillez indiquer le nombre de participation entre 0-99.");
-//   quantityError.lastElementChild.textContent = "Veuillez indiquer le nombre de participation entre 0-99.";// récuperation du dernier element de la div et modification du texte
-//   quantityError.lastElementChild.style.display = "block";// affichage du message d'erreur
-//   quantityInput.style.borderColor = "red";
-//   quantityInput.style.borderWidth = "2px";
-//   formValid = false; // formValid mise en (false) dans les vérifications non valides
-//   } else 
-
-  if (!regexQuantity.test(quantityInput.value)) {
+if (!regexQuantity.test(quantityInput.value)) {
   console.log("Veuillez indiquer le nombre de participation entre 0-99.");
-  quantityError.lastElementChild.textContent = "Veuillez indiquer le nombre de participation entre 0-99.";// récuperation du dernier element de la div et modification du texte
-  quantityError.lastElementChild.style.display = "block";// affichage du message d'erreur
+
+  quantityError.lastElementChild.textContent = "Veuillez indiquer le nombre de participation entre 0-99.";
+  quantityError.lastElementChild.style.display = "block";
   quantityInput.style.borderColor = "red";
   quantityInput.style.borderWidth = "2px";
-  formValid = false; // formValid mise en (false) dans les vérifications non valides
+
+  formValid = false;
+
   } else {
-    quantityError.lastElementChild.style.display="none";// cacher le message d'erreur
-    quantityInput.style.borderColor = "green";// affichage de la bordure en vert
+    quantityError.lastElementChild.style.display="none";
+    quantityInput.style.borderColor = "green";
     quantityInput.style.borderWidth = "3px";
     }
             
@@ -163,9 +180,12 @@ console.log(quantityInput.value);
 if (!location1.checked && !location2.checked && !location3.checked
   && !location4.checked && !location5.checked && !location6.checked) { 
   console.log("Selectionner une ville.");
+
   locationsError.lastElementChild.textContent = "Selectionner une ville.";
   locationsError.lastElementChild.style.display = "block";
-  formValid = false; // formValid mise en (false) dans les vérifications non valides
+
+  formValid = false; 
+
   } else {
     locationsError.lastElementChild.style.display = "none";
     }
@@ -173,18 +193,18 @@ if (!location1.checked && !location2.checked && !location3.checked
 //--validation condition d'utilisation
 if (!checkbox1.checked){
   console.log("Veuillez lire et accepter les condtions d'utilisation.");
-  // récuperation du dernier element de la div et modification du texte
+
   checkbox1Error.lastElementChild.textContent = "Veuillez lire et accepter les condtions d'utilisation.";
-  // affichage du message d'erreur
   checkbox1Error.lastElementChild.style.display = "block";
-  formValid = false; // formValid mise en (false) dans les vérifications non valides
+
+  formValid = false;
+  
   } else {
-    // cacher le message d'erreur
     checkbox1Error.lastElementChild.style.display="none";
     }
 
 
-//-----------DEBUT REMPLACEMENT DU FORM PAR UN MESSAGE DE VALIDATION--------------//
+//----------- DEBUT REMPLACEMENT DU FORM PAR UN MESSAGE DE VALIDATION --------------//
 
 //-- Si aucune erreur dans les champs du formulaire
 // on peut le soumettre à l'envoi
@@ -205,7 +225,6 @@ const boutonValidation = document.createElement("button")
 boutonValidation.classList.add("btn-validation")
 boutonValidation.textContent = "fermer";
 // 2.d: suppression de la validation
-// boutonValidation.addEventListener('click', () => closeModal())
 const modal = document.querySelector(".bground");
 boutonValidation.addEventListener("click", () =>{
 location.reload();
