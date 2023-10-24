@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
+
     <meta charset="utf-8"> <!-- changement /> en > -->
     <title>Reservation</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--  *****************  LIEN-LOGO  ******************  -->
     <link rel="icon" href="ASSETS/images/icon.png">
-    <!-- ***** LIEN CSS ***** -->
+
+    <!-- ******************  LIEN CSS  ******************** -->
     <link rel="stylesheet" href="CSS/modal.css">
-    <!-- ***** SCRIPT JS ***** -->
+
+    <!-- ******************  SCRIPT JS  ******************* -->
     <script src="JS/modal.js" defer></script>
     <script src="JS/form.js" defer></script>
     
-    <!-- ***** LIEN FONTS ***** -->
+    <!-- ******************  LIEN FONTS  ****************** -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet">
-  </head>
 
+  </head>
+  
   <body> 
+    <!-- NAVBAR -->
     <div class="topnav" id="myTopnav">
+      <!-- image du logo "GameOn" -->
       <div class="header-logo">
         <img alt="logo" src="ASSETS/logo/Logo.png">
-        <!-- <img alt="logo" src="ASSETS/logo/Logo.png" width="auto" height="auto" /> -->
       </div>
-      <div class="main-navbar">
-      
-      <a href="#"><span>Accueil</span></a>
-      <a href="#"><span>Détails de l'évènement</span></a>
-      <a href="#"><span>À propos</span></a>
-      <a href="#"><span>Contact</span></a>
-      <a href="#"><span>Évènements passés</span></a>
-      <a href="javascript:void(0);" class="icon" onclick="editNav()">
-        <i class="fa fa-bars"></i>
-      </a>
+      <!-- menu/menu burger -->
+      <div class="main-navbar">   
+        <a href="#"><span>Accueil</span></a>
+        <a href="#"><span>Détails de l'évènement</span></a>
+        <a href="#"><span>À propos</span></a>
+        <a href="#"><span>Contact</span></a>
+        <a href="#"><span>Évènements passés</span></a>
+        <a href="javascript:void(0);" class="icon" onclick="editNav()">
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
     </div>
+    <!-- MAIN -->
     <main>
+      <!-- Texte & image -->
       <div class="hero-section">
+        <!-- information -->
         <div class="hero-content">
           <h1 class="hero-headline">
             Marathon national<br>
@@ -46,31 +54,34 @@
             Vous aimez jouer ? Notre prochain évènement gaming est ouvert
             aux réservations... Places limitées !
           </p>
-          <button class="btn-signup modal-btn">
-            je m'inscris
-          </button>
+          <button class="btn-signup modal-btn">je m'inscris</button>
         </div>
+        <!-- image de fond -->
         <div class="hero-img">
-          <img src="ASSETS/images/bg_img.jpg" alt="img">
+          <img 
+            src="ASSETS/images/bg_img.jpg" 
+            alt="image de dos d'une personne qui tiens une manette de jeu"
+          >
         </div>
-        <button class="btn-signup modal-btn">
-          je m'inscris
-        </button>
+        <button class="btn-signup modal-btn">je m'inscris</button>
+
       </div>
+      <!-- Modal Form -->
       <div class="bground">
         <div class="content">
           <span class="form-close close"></span>
           <div class="modal-body">
+            <!-- formulaire -->
             <form
               name="reserve"
               action="index.html"
               method="get"
               novalidate>
-              
+              <!-- Prénom -->
               <div
-                class="formData" data-error-visible="false">
-                <label for="first">Prénom</label><br>
-                <!-- class="text-control text-control-error" -->
+                class="formData"
+                >
+                <label for="first">Prénom</label><br> 
                 <input
                   class="text-control" 
                   type="text"
@@ -79,9 +90,10 @@
                   minlength="2"
                   placeholder="Prénom"
                 > 
-                <!-- <p class="error" id="error-border"></p> -->
+                <!-- Validation ou non pour envoi du formulaire (Prénom) -->
                 <p class="error"></p>
               </div>
+              <!-- Nom -->
               <div
                 class="formData">
                 <label for="last">Nom</label><br>
@@ -92,8 +104,10 @@
                   name="last"
                   placeholder="Nom"
                 >
+                <!-- Validation ou non pour envoi du formulaire (Nom) -->
                 <p class="error"></p>
               </div>
+              <!-- E-mail -->
               <div
                 class="formData">
                 <label for="email">E-mail</label><br>
@@ -104,8 +118,10 @@
                   name="email"
                   placeholder="exemple@email.fr"
                 >
+                <!-- Validation ou non pour envoi du formulaire (E-mail) -->
                 <p class="error"></p>
               </div>
+              <!-- Date de naissance -->
               <div
                 class="formData">
                 <label for="birthdate">Date de naissance</label><br>
@@ -115,18 +131,33 @@
                   id="birthdate"
                   name="birthdate"
                 >
+                <!-- Validation ou non pour envoi du formulaire (Date de naissance) -->
                 <p class="error"></p>
               </div>
+              <!-- Nombre de participation -->
               <div
                 class="formData">
-                <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <label for="quantity">
+                  À combien de tournois GameOn avez-vous déjà participé ?
+                </label><br>
+                <input 
+                  type="number" 
+                  class="text-control" 
+                  id="quantity" 
+                  name="quantity"
+                  placeholder="Nombre de participation"
+                  min="0" 
+                  max="99"
+                >
+                <!-- Validation ou non pour envoi du formulaire (Nombre de participation) -->
                 <p class="error"></p>
               </div>
-<!-- modif de Quelles villes ? en A quel tournoi souhaitez-vous participer cette année ? -->
-              <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
-              <div
-                class="formData">
+              <!-- Villes pour prochain tournoi -->
+              <p class="text-label">
+                A quel tournoi souhaitez-vous participer cette année ?
+              </p>
+              <div class="formData">
+                <!-- New York -->
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -135,9 +166,12 @@
                   value="New York"
                 >
                 <label class="checkbox-label" for="location1">
-                  <span class="checkbox-icon"></span>
-                  New York</label
-                >
+                  <span 
+                    class="checkbox-icon">
+                  </span>
+                  New York
+                </label>
+                <!-- San Francisco -->
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -146,9 +180,12 @@
                   value="San Francisco"
                 >
                 <label class="checkbox-label" for="location2">
-                  <span class="checkbox-icon"></span>
-                  San Francisco</label
-                >
+                  <span 
+                    class="checkbox-icon">
+                  </span>
+                  San Francisco
+                </label>
+                <!-- Seattle -->
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -157,9 +194,12 @@
                   value="Seattle"
                 >
                 <label class="checkbox-label" for="location3">
-                  <span class="checkbox-icon"></span>
-                  Seattle</label
-                >
+                  <span 
+                    class="checkbox-icon">
+                  </span>
+                  Seattle
+                </label>
+                <!-- Chicago -->
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -168,9 +208,12 @@
                   value="Chicago"
                 >
                 <label class="checkbox-label" for="location4">
-                  <span class="checkbox-icon"></span>
-                  Chicago</label
-                >
+                  <span 
+                    class="checkbox-icon">
+                  </span>
+                  Chicago
+                </label>
+                <!-- Boston -->
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -179,9 +222,12 @@
                   value="Boston"
                 >
                 <label class="checkbox-label" for="location5">
-                  <span class="checkbox-icon"></span>
-                  Boston</label
-                >
+                  <span 
+                    class="checkbox-icon">
+                  </span>
+                  Boston
+                </label>
+                <!-- Portland -->
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -190,14 +236,17 @@
                   value="Portland"
                 >
                 <label class="checkbox-label" for="location6">
-                  <span class="checkbox-icon"></span>
-                  Portland</label
-                >
+                  <span 
+                    class="checkbox-icon">
+                  </span>
+                  Portland
+                </label>             
+                <!-- Validation ou non pour envoi du formulaire (villes) -->
                 <p class="error " id="location-error"></p>
               </div>
-  
-              <div
-                class="formData">
+              <!-- Conditions d'utilisation &  prochains évènements -->
+              <div  class="formData">
+                <!-- Conditions d'utilisation -->
                 <input
                   class="checkbox-input"
                   type="checkbox"
@@ -205,38 +254,45 @@
                   id="checkbox1"
                 >
                 <label class="checkbox2-label" for="checkbox1">
-                  <span class="checkbox-icon"></span>
+                  <span 
+                    class="checkbox-icon">
+                  </span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
                 <br>
-                <input class="checkbox-input" type="checkbox" id="checkbox2" name="checkbox2">
+                <!-- prochains évènements -->
+                <input 
+                  class="checkbox-input" 
+                  type="checkbox" 
+                  id="checkbox2" 
+                  name="checkbox2"
+                >
                 <label class="checkbox2-label" for="checkbox2">
-                  <span class="checkbox-icon"></span>
+                  <span 
+                    class="checkbox-icon">
+                  </span>
                   Je souhaite être prévenu des prochains évènements.
                 </label>
+                <!-- Validation ou non pour envoi du formulaire (Conditions d'utilisation) -->
                 <p class="error"></p>
               </div>
+              <!-- Boutton de soumition du formulaire "C'est parti" -->
               <input
                 class="btn-submit"
                 type="submit"
                 id="btn-envoi"
                 value="C'est parti"
               >
-            </form>
-            
+            </form>              
           </div>
         </div>
       </div>
     </main>
-
     <!-- FOOTER -->
     <footer>
-      <p class="copyrights">
-        Copyright 2014 - 2022, GameOn Inc.
-      </p>
-    </footer>    
-    <!-- <script src="modal.js"></script> -->
-
+        <p class="copyrights">
+          Copyright 2014 - 2022, GameOn Inc.
+        </p>
+    </footer>     
   </body>
-
 </html>
