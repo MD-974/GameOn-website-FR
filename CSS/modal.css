@@ -290,7 +290,7 @@ input[data-error]::after {
 
 /* mise en forme(button) via la class = btn-validation */
 .btn-validation {
-  margin: 250px auto 150px;
+  margin: 370px auto 30px;
 }
 /* custom select styles */
 .custom-select {
