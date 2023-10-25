@@ -50,7 +50,7 @@ img {
   border-radius: 15px;
 }
 
-/*** ajout couleur rouge au survol ***/
+/*** couleur rouge au survol ***/
 .topnav a:hover {
   color: #ff0000;
   border-radius: 15px;
@@ -105,8 +105,6 @@ main {
 
 /*************** MODAL FORM ************/
 
-
-/*** changement de "button" en "btn-submit" ***/
 .btn-submit {
   background: #fe142f;
   margin-top: 0.5em;
