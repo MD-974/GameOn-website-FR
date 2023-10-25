@@ -131,7 +131,8 @@ main {
   height: 100%;
   width: 100%;
   overflow: auto;
-  background-color: rgba(26, 39, 156, 0.4);
+  /* background-color: rgba(26, 39, 156, 0.4); */
+  background-color: white;
 }
 .content {
   margin: 5% auto;
@@ -229,7 +230,12 @@ color: red; } */
   opacity: 0;
 }
 .checkbox-input {
-  display: none;
+  /* display: none; */
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  top: 17px;
+  left: 10px;
 }
 .checkbox-input:checked + .checkbox-label .checkbox-icon::after,
 .checkbox-input:checked + .checkbox2-label .checkbox-icon::after {
@@ -458,7 +464,7 @@ footer {
   margin: 0 20px;
 }
 
-/* **-----------------DEBUT MEDIA-QUERIES---------** */
+/* **------------DEBUT MEDIA-QUERIES---------** */
 
 @media screen and (max-width: 1130px) {
 
@@ -536,18 +542,50 @@ footer {
 
 @media screen and (max-width: 540px) {
 
-.topnav {
-  display:block;
+
+/*  AJOUT POUR LE BACKGROUND ET NAVBAR */
+
+/* ============================ */
+.content {
+  margin: 25% auto 0;
 }
+
+.topnav {
+  position: fixed;
+  z-index: 2;
+  overflow: visible;
+  margin: 0;
+  padding: 20px 15px 0;
+  width: 100%;
+  background-color: white;
+}
+/* ============================= */
+
+
 .topnav a {
   display: none;
 }
 .topnav a.icon {
   display: block;
-  /****** changement -15px à 5 px pour ajuster "icon" ******/
   margin-top: 5px; 
 }
+
+
+
+/* ============================ */
+.hero-headline {
+  margin-top: 80px;
+}
+
+.header-logo img{
+  width: 140px;
+  position: relative;
+  z-index: 3;
+}
+/* ============================ */
 }  
+
+
 
 @media screen and (max-width: 450px){
 
@@ -560,6 +598,7 @@ footer {
   padding: 12px 40px;
 }
 }
+
 
 /* **-----------------FIN MEDIA-QUERIES-----------** */
 
