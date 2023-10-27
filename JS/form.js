@@ -44,11 +44,15 @@ form.addEventListener("submit", (event) => {
 
   //----- CREATION D'UNE VARIABLE(formValid) -----//
 
-  //-- 1: considèrer le formulaire comme valide par défaut
+  //-->considèrer le formulaire comme valide par défaut
   let formValid = true;
-  //-- 2: récupération de la valeur de l’input
+
+  //****************** VERIFICATION DU FORMULAIRE ********************/
+
+  //-- PRENOM --//
+  //-->récupération de la valeur de l’input
   console.log(firstNameInput.value)
-  //-- 3: vérification  des requis de validation
+  //-->vérification  des requis de validation
   if (firstNameInput.value == "") {
     console.log("Le Prénom est requis.");
 
@@ -73,10 +77,11 @@ form.addEventListener("submit", (event) => {
         firstNameInput.style.borderColor = "green";// affichage de la bordure en vert
         firstNameInput.style.borderWidth = "3px";// epaisseur de la bordure verte
       } 
-                
-  //--récupération de la valeur de l’input
+
+  //-- NOM --//             
+  //-->récupération de la valeur de l’input
   console.log(lastNameInput.value)
-  //--vérification  des requis de validation
+  //-->vérification  des requis de validation
   if (lastNameInput.value == "") {
     console.log("Le Nom est requis.");
 
@@ -102,10 +107,10 @@ form.addEventListener("submit", (event) => {
         lastNameInput.style.borderColor = "green";
         lastNameInput.style.borderWidth = "3px";
       }
-
-  //--récupération de la valeur l'email
+  //-- EMAIL --//
+  //-->récupération de la valeur l'email
   console.log(emailInput.value)
-  //--vérification  des requis de validation  
+  //-->vérification  des requis de validation  
   if (emailInput.value == "") {
     console.log("L'Email est requis.");
 
@@ -131,10 +136,10 @@ form.addEventListener("submit", (event) => {
         emailInput.style.borderColor = "green";
         emailInput.style.borderWidth = "3px";
       }
-
-  //--validation de la date de naissance
+  //-- DATE DE NAISSANCE --//
+  //-->validation de la date de naissance
   console.log(birthdateInput.value)
-  //--vérification  des requis de validation
+  //-->vérification  des requis de validation
   if (birthdateInput.value == "") {
       console.log("Veuillez indiquer une date de naissance.");
 
@@ -150,10 +155,10 @@ form.addEventListener("submit", (event) => {
         birthdateInput.style.borderColor = "green";
         birthdateInput.style.borderWidth = "3px";
       }
-                
-    //--validation nombre de participation
+    //-- PARTICIPATION --//           
+    //-->validation nombre de participation
     console.log(quantityInput.value);
-    //--vérification  des requis de validation 
+    //-->vérification  des requis de validation 
     if (!regexQuantity.test(quantityInput.value)) {
       console.log("Veuillez indiquer le nombre de participation entre 0-99.");
 
@@ -169,8 +174,8 @@ form.addEventListener("submit", (event) => {
         quantityInput.style.borderColor = "green";
         quantityInput.style.borderWidth = "3px";
       }
-                
-    //--validation selection de la ville
+    //-- VILLES --//          
+    //-->validation selection de la ville
     if (!location1.checked && !location2.checked && !location3.checked
       && !location4.checked && !location5.checked && !location6.checked) { 
       console.log("Selectionner une ville.");
@@ -183,8 +188,9 @@ form.addEventListener("submit", (event) => {
     } else {
         locationsError.lastElementChild.style.display = "none";
       }
-
-    //--validation condition d'utilisation
+    
+    //-- CONDITION D'UTILISATION --//
+    //-->validation condition d'utilisation
     if (!checkbox1.checked){
       console.log("Veuillez lire et accepter les condtions d'utilisation.");
 
@@ -196,9 +202,10 @@ form.addEventListener("submit", (event) => {
     } else {
         checkbox1Error.lastElementChild.style.display="none";
       }
+    //************** FIN VERIFICATION DU FORMULAIRE ********************/  
 
 
-    //----------- DEBUT REMPLACEMENT DU FORM PAR UN MESSAGE DE VALIDATION --------------//
+    //****** DEBUT REMPLACEMENT DU FORM PAR UN MESSAGE DE VALIDATION **********//
 
     //-- Si aucune erreur dans les champs du formulaire
     // on peut le soumettre à l'envoi
@@ -232,7 +239,8 @@ form.addEventListener("submit", (event) => {
       // 3 -->Insérer dans le DOM(.modal-body), les deux nouveaux élements.
       modalBody.append(paragraphe);
       modalBody.append(boutonValidation);
-      //-------------FIN REMPLACEMENT DU FORM PAR UN MESSAGE DE VALIDATION--------------//
+
+      //***** FIN REMPLACEMENT DU FORM PAR UN MESSAGE DE VALIDATION *****//
     }
 })
 
